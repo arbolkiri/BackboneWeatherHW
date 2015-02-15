@@ -78,3 +78,25 @@ img {max-width:100%;}
 body {
     transition: opacity .25s ease;
 }
+.container{
+    columns: 2;
+    margin: 1em;
+    background-color: #B4D1B6;
+
+}
+.header{
+    display: inline-block;
+    font-family: sans serif;
+    border: 1px solid black;
+}
+.button{
+    position: relative;
+    display: block;
+    font-family: Impact;
+    border: 1px solid black;
+}
+.right{
+    position: relative;
+    background-color: #BAD0EF;
+    border: 1px solid black;
+}
