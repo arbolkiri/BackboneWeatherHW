@@ -1,3 +1,5 @@
+//INDEX HTML IS LOADING FIRST AND THEN WEATHERTEMPLATE LOADS. NEED TO GET TEMPLATE TO RENDER WHEN I WANT IT TO, NOT AUTOMATICALLY.
+
 ;
 (function(exports) { //backbone model handles communication with REST APIs
 
@@ -37,6 +39,28 @@
                 "?callback=?"
             ].join('')
         }
+        // defaults: {
+        //     forecast: "Cold Front",
+        //     lat: 29.7628,
+        //     lng: 95.3831
+        // },
+        // validate: function(attrs){
+        //     if(attrs.lat === 0 || attrs.lng === 0){
+        //         return "Lat or Lng not set."
+        //     }
+        // }
+        // initialize: function(){
+        //     this.on("change", function(model, options){
+        //         console.log(model)
+        //         console.log(options)
+        //     })
+        //     this.on("change: forecast", function(model, value, options){
+        //         console.log("forecast changed")
+        //     })
+        //     this.on("invalid", function(model, errorMessage, options){
+        //         alert("Error, please try again")
+        //     })
+        // }
     })
 
     Backbone.TemplateView = Backbone.View.extend({
@@ -47,14 +71,14 @@
                 x.resolve(cache[url]);
             } else {
                 $.get(url).then((function(d) {
-                    debugger;
+
                     this.cache[url] = _.template(d);
                     x.resolve(_.template(d));
                 }).bind(this));
             }
             return x;
         },
-        loadTemplate: function(name) {
+        loadTemplate: function(name) {//HOW DO I GET THE TEMPLATE TO LOAD WHEN I WANT IT TO AND NOT RIGHT AWAY?
             return this.stream('./templates/' + name + '.html');
         },
         initialize: function(options) {
@@ -63,7 +87,7 @@
         },
         render: function() {
             var self = this;
-            this.loadTemplate(this.options.view).then(function(fn) {
+            this.loadTemplate(this.options.view || this.view).then(function(fn) {
                 debugger;
                 self.model && (self.el.innerHTML = fn(self.model.toJSON()));
             })
