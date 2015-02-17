@@ -2,6 +2,7 @@
 @import "../bower_components/typeplate-starter-kit/css/_typeplate.scss";
 @import "./mixins.scss";
 
+
 /**
  * BOX-SIZING
  */
@@ -76,14 +77,9 @@
 img {max-width:100%;}
 
 body {
-    transition: opacity .25s ease;
+    // transition: opacity .25s ease;
 }
-.container{
-    columns: 2;
-    margin: 1em;
-    background-color: #B4D1B6;
 
-}
 #searcharea{
     position: relative;
     font-family: cursive;
@@ -99,12 +95,23 @@ margin-top: 10px;
 }
 
 h4 {
+    margin-left: 30px;
 margin-top: -30px;
     display: inline-block;
     color: white;
     float: left;
 }
 
-.results {
+.container {
+    width: 100%;
+    display: inline-block;
     background-color: #BAD0EF;
+}
+.today{
+    margin-left: 20px;
+    font-family: Helvetica;
+    height: 100%;
+}
+h3 {
+    margin-left: 20px;
 }
