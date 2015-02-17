@@ -878,17 +878,20 @@ abbr[title]:hover {
 img {
   max-width: 100%; }
 
-body {
-  -webkit-transition: opacity .25s ease;
-          transition: opacity .25s ease; }
+#searcharea {
+  position: relative;
+  font-family: cursive;
+  width: 100%;
+  height: 65px;
+  text-align: center;
+  background-color: #5591DF; }
 
-.container {
-  -webkit-columns: 2;
-     -moz-columns: 2;
-          columns: 2;
-  margin: 1em;
-  background-color: #B4D1B6; }
+.button {
+  margin-top: 10px;
+  display: inline-block;
+  position: relative; }
 
+<<<<<<< HEAD
 #searcharea {
   position: relative;
   font-family: cursive;
@@ -910,4 +913,25 @@ h4 {
 
 .results {
   background-color: #BAD0EF; }
+=======
+h4 {
+  margin-left: 30px;
+  margin-top: -30px;
+  display: inline-block;
+  color: white;
+  float: left; }
+
+.container {
+  width: 100%;
+  display: inline-block;
+  background-color: #BAD0EF; }
+
+.today {
+  margin-left: 20px;
+  font-family: Helvetica;
+  height: 100%; }
+
+h3 {
+  margin-left: 20px; }
+>>>>>>> master
 
