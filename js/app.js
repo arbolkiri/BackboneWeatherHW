@@ -18,7 +18,7 @@ function app(){
         // {url: "./js/Weatherview.js"}//-need to make
 
     ).then(function(){
-        document.querySelector("html").style.opacity = 1;
+        document.querySelector("html").style.opacity = 2;
         // start app?
     })
 

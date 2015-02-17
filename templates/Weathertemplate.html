@@ -1,4 +1,21 @@
-<div class="results">
-<p> <%= currently %> </p>
+<div class ="today">
+    <h3> TODAY </h3>
 
+    <p> Temperature:
+        <%=currently.apparentTemperature %>
+    </p>
+    <p>Summary:
+        <%=currently.summary%>
+    </p>
+     <p>WindSpeed:
+        <%=currently.windSpeed%>
+    </p>
+    <p>Humidity:
+        <%=currently.humidity%>
+    </p>
+<a href="./templates/7DayTemplate.html">Extended Forecast</a>
 </div>
+
+
+
+
